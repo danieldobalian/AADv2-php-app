@@ -8,7 +8,7 @@ session_start();
 $provider = new TheNetworg\OAuth2\Client\Provider\Azure([
     'clientId'          => 'Register your app at apps.dev.microsoft.com',
     'clientSecret'      => 'Register your app at apps.dev.microsoft.com',
-    'redirectUri'       => 'The redirect URI you registered (I used: http://localhost/login)'
+    'redirectUri'       => 'http://localhost:8000/login.php'
 ]);
 
 // Just do basic read of /me endpoint 
