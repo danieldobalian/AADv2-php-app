@@ -43,7 +43,8 @@ if (!isset($_GET['code'])) {
         $me = $provider->get("me", $token);
 
         // To get individual claims, you can do '$me['givenName']'
-        exit(implode("<br>", $me));
+        $values = '<pre>' . print_r($me, true) . '</pre>';
+        exit($values);
 
     } catch (Exception $e) {
         exit('Failed to call the me endpoint of MS Graph.');
