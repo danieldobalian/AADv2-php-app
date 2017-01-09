@@ -8,13 +8,25 @@ Daniel Dobalian ([dadobali@microsoft.com](mailto:dadobali@microsoft.com))
 
 ## Steps to Run
 
-Register an Azure AD v2 app to obtain a client id (or consumer key). Click "Generate New Password', this will be your consumer secret. Then add Redirect URI's for the desired redirect route in the app.  If you use the same redirect URI as in code, you should only need to make 2 changes to the sample code.  
+Register an Azure AD v2 app to obtain a client id (or consumer key) on our [Microsoft Identity Portal](https://identity.microsoft.com). Once you register a new app, Click "Generate New Password'.  This will be your consumer secret. Then click "Add Platform" and add a Redirect URI's for the desired redirect route in the app.  If you use the same redirect URI as in the sample code, you will make 2 changes in code. 
 
-Use your favorite php web hosting server and simply navigate to mylocalwebserver/login.php.  I used a simple Apache web server (Great sample [here](https://jason.pureconcepts.net/2015/10/install-apache-php-mysql-mac-os-x-el-capitan/)). 
+Included in the sample is a comoser file with the required dependencies, you can run:
+```
+composer install
+composer update
+```
+
+Then run the following command and navigate to localhost:8000/login.php:
+```
+php -S localhost:8000
+```
+
 
 ## References
 
 This app uses the phpleague's Library and TheNetworg's plugin for all Identity code.  Please report any library or plugin issues to these authors. 
+
+Thanks to [Caitlin](https://github.com/cbales) for reviewing and improving this sample. 
 
 ###Frameworks
 
